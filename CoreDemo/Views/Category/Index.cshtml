@@ -1,0 +1,37 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{
+    Layout = null;
+}
+
+
+<a href="~/lib/bootstrap/dist/css/bootstrap.min.css.map">~/lib/bootstrap/dist/css/bootstrap.min.css.map</a>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<table class="table table-bordered">
+    <tr> 
+        <td>Category ID</td>
+        <td>Category Name</td>
+        <td>Category Description</td>
+        <td>Category Status</td>
+        <td>Category Detaylar</td>
+        <td>Category Sil</td>
+        <td></td>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <th>@item.CategoryID</th>
+            <th>@item.CategoryName</th>
+            <th>@item.CategoryDescription</th>
+            <th>@item.CategoryStatus</th>
+            <th><a href="#" class="btn btn-warning">Detaylar</a></th>
+            <th><a href="#"class="btn btn-danger">Sil</a></th>
+            <th></th>
+        </tr>
+    }
+
+
+</table>
